@@ -17,8 +17,8 @@ colToDrop = ['DETAILED ITEM DESCRIPTION','VENDOR NUM']
 myFile = myFile.drop(colToDrop,axis=1)
 len(myFile.columns)
 
-
-
+crimeData = pd.read_csv('DataFiles/Crime_Data_from_2020_to_Present.csv')
+crimeData.corr()
 
 
 
