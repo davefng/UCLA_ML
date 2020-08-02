@@ -10,15 +10,19 @@ import pandas as pd
 
 os.getcwd()
     
-myFile = pd.read_csv('DataFiles/Police_Spending.csv',low_memory=False)
-myFile.corr()
+spending = pd.read_csv('DataFiles/Police_Spending.csv',low_memory=False)
+spend_corr = spending.corr()
 
 colToDrop = ['DETAILED ITEM DESCRIPTION','VENDOR NUM']
 myFile = myFile.drop(colToDrop,axis=1)
 len(myFile.columns)
 
 crimeData = pd.read_csv('DataFiles/Crime_Data_from_2020_to_Present.csv')
-crimeData.corr()
+crimeDataCorr = crimeData.corr()
+
+with pd.ExcelWriter('DataFiles/Correlations.xlsx') as writer:
+    spend_corr.to_excel(writer,sheet_name='spendingCorr')
+    crimeDataCorr.to_excel(writer,sheet_name='crimeDataCorr')
 
 
 
