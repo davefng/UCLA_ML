@@ -13,7 +13,8 @@ Crime Data 2010-2019
 https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-2019/63jg-8b9z
 
 
-
+Crime Data 2020+
+https://data.lacity.org/A-Safe-City/Crime-Data-from-2020-to-Present/2nrs-mtv8
 
 
 
